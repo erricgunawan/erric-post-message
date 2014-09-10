@@ -8,8 +8,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/public/partials
+ * @package    Erric_Post_Message
+ * @subpackage Erric_Post_Message/public/partials
  */
 ?>
 

@@ -9,8 +9,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Erric_Post_Message
+ * @subpackage Erric_Post_Message/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that its ready for translation.
  *
  * @since      1.0.0
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Erric_Post_Message
+ * @subpackage Erric_Post_Message/includes
  * @author     Your Name <email@example.com>
  */
-class Plugin_Name_i18n {
+class Erric_Post_Message_i18n {
 
 	/**
 	 * The domain specified for this plugin.

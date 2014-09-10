@@ -10,7 +10,7 @@
  *
  * @link              http://example.com
  * @since             1.0.0
- * @package           Plugin_Name
+ * @package           Erric_Post_Message
  *
  * @wordpress-plugin
  * Plugin Name:       WordPress Plugin Boilerplate
@@ -41,10 +41,10 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-activator
 require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-deactivator.php';
 
 /** This action is documented in includes/class-plugin-name-activator.php */
-register_activation_hook( __FILE__, array( 'Plugin_Name_Activator', 'activate' ) );
+register_activation_hook( __FILE__, array( 'Erric_Post_Message_Activator', 'activate' ) );
 
 /** This action is documented in includes/class-plugin-name-deactivator.php */
-register_deactivation_hook( __FILE__, array( 'Plugin_Name_Deactivator', 'deactivate' ) );
+register_deactivation_hook( __FILE__, array( 'Erric_Post_Message_Deactivator', 'deactivate' ) );
 
 /**
  * The core plugin class that is used to define internationalization,
@@ -61,10 +61,10 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name.php';
  *
  * @since    1.0.0
  */
-function run_plugin_name() {
+function run_erric_post_message() {
 
-	$plugin = new Plugin_Name();
+	$plugin = new Erric_Post_Message();
 	$plugin->run();
 
 }
-run_plugin_name();
+run_erric_post_message();
