@@ -73,7 +73,7 @@ class Erric_Post_Message_Public {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->name, plugin_dir_url( __FILE__ ) . 'css/plugin-name-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->name, plugin_dir_url( __FILE__ ) . 'css/erric-post-message-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -96,7 +96,7 @@ class Erric_Post_Message_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->name, plugin_dir_url( __FILE__ ) . 'js/plugin-name-public.js', array( 'jquery' ), $this->version, FALSE );
+		wp_enqueue_script( $this->name, plugin_dir_url( __FILE__ ) . 'js/erric-post-message-public.js', array( 'jquery' ), $this->version, FALSE );
 
 	}
 

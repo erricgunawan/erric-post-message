@@ -14,14 +14,14 @@
  *
  * @wordpress-plugin
  * Plugin Name:       WordPress Plugin Boilerplate
- * Plugin URI:        http://example.com/plugin-name-uri/
+ * Plugin URI:        http://example.com/erric-post-message-uri/
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress dashboard.
  * Version:           1.0.0
  * Author:            Your Name or Your Company
  * Author URI:        http://example.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       plugin-name
+ * Text Domain:       erric-post-message
  * Domain Path:       /languages
  */
 
@@ -33,24 +33,24 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * The code that runs during plugin activation.
  */
-require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-activator.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/class-erric-post-message-activator.php';
 
 /**
  * The code that runs during plugin deactivation.
  */
-require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-deactivator.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/class-erric-post-message-deactivator.php';
 
-/** This action is documented in includes/class-plugin-name-activator.php */
+/** This action is documented in includes/class-erric-post-message-activator.php */
 register_activation_hook( __FILE__, array( 'Erric_Post_Message_Activator', 'activate' ) );
 
-/** This action is documented in includes/class-plugin-name-deactivator.php */
+/** This action is documented in includes/class-erric-post-message-deactivator.php */
 register_deactivation_hook( __FILE__, array( 'Erric_Post_Message_Deactivator', 'deactivate' ) );
 
 /**
  * The core plugin class that is used to define internationalization,
  * dashboard-specific hooks, and public-facing site hooks.
  */
-require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/class-erric-post-message.php';
 
 /**
  * Begins execution of the plugin.

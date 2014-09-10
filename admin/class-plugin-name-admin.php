@@ -73,7 +73,7 @@ class Erric_Post_Message_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->name, plugin_dir_url( __FILE__ ) . 'css/plugin-name-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->name, plugin_dir_url( __FILE__ ) . 'css/erric-post-message-admin.css', array(), $this->version, 'all' );
 
 	}
 
@@ -96,7 +96,7 @@ class Erric_Post_Message_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->name, plugin_dir_url( __FILE__ ) . 'js/plugin-name-admin.js', array( 'jquery' ), $this->version, FALSE );
+		wp_enqueue_script( $this->name, plugin_dir_url( __FILE__ ) . 'js/erric-post-message-admin.js', array( 'jquery' ), $this->version, FALSE );
 
 	}
 
