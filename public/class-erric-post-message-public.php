@@ -18,7 +18,7 @@
  *
  * @package    Erric_Post_Message
  * @subpackage Erric_Post_Message/admin
- * @author     Your Name <email@example.com>
+ * @author     Eric Gunawan <erricgunawan@gmail.com>
  */
 class Erric_Post_Message_Public {
 
