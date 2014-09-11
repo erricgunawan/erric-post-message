@@ -100,4 +100,68 @@ class Erric_Post_Message_Admin {
 
 	}
 
+	/**
+	 * 
+	 */
+	public function add_notice_metabox() {
+		add_meta_box(
+			'post_message',
+			__( 'Erric Post Message', 'erric-post-message' ),
+			array( $this, 'post_message_display' ),
+			'post',
+			'normal',
+			'high'
+		);
+	}
+
+	/**
+	 * 
+	 */
+	public function post_message_display( $post ) {
+		wp_nonce_field( plugin_basename( __FILE__ ), 'post_message_nonce' );
+
+		// The textfield and preview area
+		echo '<textarea id="post-message" name="post_message" placeholder="' . __( 'Enter your post message here. HTML accepted.', 'erric-post-message' ) . '">' . esc_textarea( get_post_meta( $post->ID, 'post_message', true ) ) . '</textarea>';
+
+	} // end post_message_display
+
+	/**
+	 * 
+	 */
+	public function save_notice( $post_id ) {
+
+		if ( isset( $_POST['post_message_nonce'] ) && isset( $_POST['post_type'] ) ) {
+
+			// Don't save if the user hasn't submitted the changes
+			if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+				return;
+			} // end if
+
+			// Verify that the input is coming from the proper form
+			if ( ! wp_verify_nonce( $_POST['post_message_nonce'], plugin_basename( __FILE__ ) ) ) {
+				return;
+			} // end if
+
+			// Make sure the user has permissions to post
+			if ( 'post' == $_POST['post_type'] ) {
+				if ( ! current_user_can( 'edit_post', $post_id ) ) {
+					return;
+				} // end if
+			} // end if/else
+
+			// Read the post message
+			$post_message = isset( $_POST['post_message'] ) ? $_POST['post_message'] : '';
+
+			// If the value for the post message exists, delete it first. Don't want to write extra rows into the table.
+			if ( 0 == count( get_post_meta( $post_id, 'post_message' ) ) ) {
+				delete_post_meta( $post_id, 'post_message' );
+			}
+
+			// Update it for this post.
+			update_post_meta( $post_id, 'post_message', $post_message );
+
+		} // end if
+
+	} // end save_notice
+
 }
