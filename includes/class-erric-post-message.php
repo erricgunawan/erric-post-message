@@ -174,6 +174,8 @@ class Erric_Post_Message {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
+		$this->loader->add_filter( 'the_content', $plugin_public, 'prepend_post_message' );
+
 	}
 
 	/**

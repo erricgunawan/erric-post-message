@@ -100,4 +100,21 @@ class Erric_Post_Message_Public {
 
 	}
 
+	/**
+	 * 
+	 */
+	public function prepend_post_message( $content ) {
+
+		// If there is a notice, prepend it to the content
+		if ( '' != get_post_meta( get_the_ID(), 'post_message', true ) ) {
+			$post_message = '<p class="post-message">';
+			$post_message .= get_post_meta( get_the_ID(), 'post_message', true );
+			$post_message .= '</p><!-- /.post-message -->'; // end of journey
+
+			$content = $post_message . $content;
+		} // end if
+
+		return $content;
+
+	}
 }
